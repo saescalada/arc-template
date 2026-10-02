@@ -1,9 +1,9 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import "./Header.css";
 
-const links = [["/", "HOME"], ["/games", "GAMES"], ["/news", "NEWS"], ["/about", "ABOUT"], ["/contact", "CONTACT"]];
+const links = [["/", "HOME"], ["/services", "SERVICES"], ["/clients", "CLIENTS"], ["/news", "NEWS"], ["/about", "ABOUT"], ["/contact", "CONTACT"]];
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);

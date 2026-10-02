@@ -6,7 +6,8 @@ import "./Footer.css";
 
 const navigation = [
   ["/news", "NEWS"],
-  ["/games", "GAMES"],
+  ["/services", "SERVICES"],
+  ["/clients", "CLIENTS"],
   ["/about", "COMPANY"],
   ["/contact", "CONTACT"],
 ];

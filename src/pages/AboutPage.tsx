@@ -1,229 +1,88 @@
-import { Link } from "react-router-dom";
-import TeamMember from "../components/TeamMember/TeamMember";
-import { team } from "../data/team";
-import aboutImage from "../assets/images/about-studio.jpg";
-
+﻿import { Link } from "react-router-dom";
+import studioImage from "../assets/images/about-studio.jpg";
+import omenArtwork from "../assets/images/hero-2.png";
 import "../styles/about.css";
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <div className="about-page">
-      {/* HERO */}
+      <div className="about-container">
+        <header className="about-heading">
+          <span className="about-label">ABOUT / AONE GAMES</span>
+          <h1>A game studio.<br /><span>From Santiago to your screen.</span></h1>
+          <p>We create original games and work with studios and brands on programming, art and interactive experiences.</p>
+        </header>
 
-      <section className="about-hero">
-        <div className="about-hero-container">
-          <span className="about-label">ABOUT US</span>
-
-          <h1>
-            WE CREATE
-            <br />
-            NEW WORLDS.
-          </h1>
-
-          <p>
-            We are an independent game studio focused on creating memorable
-            worlds, characters and experiences for players around the world.
-          </p>
-        </div>
-      </section>
-
-      {/* IMAGE */}
-
-      <section className="about-image">
-        <img src={aboutImage} alt="Game development studio" />
-      </section>
-
-      {/* INTRO */}
-
-      <section className="about-intro">
-        <div className="about-intro-container">
-          <div className="about-intro-heading">
-            <span>OUR STORY</span>
-
-            <h2>
-              GAMES ARE
-              <br />
-              OUR PASSION.
-            </h2>
+        <section className="about-story" aria-labelledby="about-story-title">
+          <figure className="about-studio-photo">
+            <img src={studioImage} alt="An artist working on character animation at a game development workstation" width="1100" height="656" />
+            <figcaption>ART, ANIMATION AND DEVELOPMENT</figcaption>
+          </figure>
+          <div className="about-story-copy">
+            <span className="about-label">01 / THE STUDIO</span>
+            <h2 id="about-story-title">Original games.<br />Hands-on experience.</h2>
+            <p>AOne Games is a video game company based in Santiago, Chile, with experience developing for PC and consoles.</p>
+            <p>Our work includes Omen of Sorrow, a fighting game inspired by horror, literature and mythology. Alongside our own games, we contribute programming, art and development services to projects for other teams.</p>
+            <p>That work connects game creation with the technical and artistic disciplines needed to bring a project to life.</p>
           </div>
+        </section>
 
-          <div className="about-intro-text">
-            <p>
-              Our studio brings together developers, artists, designers and
-              creators with one shared goal: building unforgettable interactive
-              experiences.
-            </p>
+        <section className="about-stats" aria-label="Studio at a glance">
+          <div className="about-stat"><strong>10+</strong><span>YEARS CREATING</span></div>
+          <div className="about-stat"><strong>25+</strong><span>GAMES RELEASED</span></div>
+          <div className="about-stat"><strong>50+</strong><span>TEAM MEMBERS</span></div>
+          <div className="about-stat"><strong>15M+</strong><span>PLAYERS</span></div>
+        </section>
 
-            <p>
-              From competitive games to immersive adventures, we believe every
-              project should have its own identity and something meaningful to
-              offer players.
-            </p>
+        <section className="about-philosophy" aria-labelledby="about-philosophy-title">
+          <div><span className="about-label">A NOTE ON HOW WE CREATE</span><h2 id="about-philosophy-title">We don't just make games.<br /><span>We build worlds people remember.</span></h2></div>
+          <p>Every project begins with an idea. We bring the people, craft and care together to make it real.</p>
+        </section>
+
+        <section className="about-work" aria-labelledby="about-work-title">
+          <div className="about-section-heading"><span className="about-label">02 / OUR EXPERIENCE</span><h2 id="about-work-title">Get to know us through our work.</h2></div>
+          <div className="about-work-rows">
+            <a href="https://omen.aonegames.com/" className="about-work-row">
+              <span className="about-row-number">01</span><div><span className="about-row-label">OUR ORIGINAL GAME</span><h3>Omen of Sorrow</h3></div><p>A 2.5D fighting game with a dark identity and classic arcade roots.</p><span className="about-row-arrow" aria-hidden="true">↗</span>
+            </a>
+            <Link to="/nemo" className="about-work-row">
+              <span className="about-row-number">02</span><div><span className="about-row-label">OUR TECHNOLOGY</span><h3>NEMO Fighting Engine</h3></div><p>Our Unreal Engine-based framework specialized in 2.5D fighting games.</p><span className="about-row-arrow" aria-hidden="true">↗</span>
+            </Link>
+            <Link to="/clients" className="about-work-row">
+              <span className="about-row-number">03</span><div><span className="about-row-label">COLLABORATIONS</span><h3>Studios & brands</h3></div><p>Programming, art and interactive experiences for Funlabs, Sunspear Games and Coca-Cola.</p><span className="about-row-arrow" aria-hidden="true">↗</span>
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* NUMBERS */}
-
-      <section className="about-stats">
-        <div className="about-stats-container">
-          <div className="about-stat">
-            <strong>10+</strong>
-            <span>YEARS CREATING</span>
-          </div>
-
-          <div className="about-stat">
-            <strong>25+</strong>
-            <span>GAMES RELEASED</span>
-          </div>
-
-          <div className="about-stat">
-            <strong>50+</strong>
-            <span>TEAM MEMBERS</span>
-          </div>
-
-          <div className="about-stat">
-            <strong>15M+</strong>
-            <span>PLAYERS</span>
-          </div>
-        </div>
-      </section>
-
-      {/* PHILOSOPHY */}
-
-      <section className="about-philosophy">
-        <div className="about-philosophy-container">
-          <div className="about-philosophy-top">
-            <span>02 / OUR PHILOSOPHY</span>
-
-            <p>
-              Every game starts with an idea. We turn those ideas into worlds
-              worth exploring.
-            </p>
-          </div>
-
-          <div className="about-philosophy-message">
-            <h2>
-              WE DON'T JUST
-              <br />
-              MAKE GAMES.
-            </h2>
-
-            <h2 className="philosophy-outline">
-              WE BUILD WORLDS
-              <br />
-              PEOPLE REMEMBER.
-            </h2>
-          </div>
-        </div>
-      </section>
-
-      {/* TEAM */}
-
-      <section className="about-team">
-        <div className="about-team-container">
-          <div className="about-team-header">
-            <div>
-              <span className="about-team-label">03 / OUR TEAM</span>
-
-              <h2>
-                THE PEOPLE
-                <br />
-                BEHIND THE GAMES.
-              </h2>
-            </div>
-
-            <p>
-              Meet the creators, developers and artists bringing our worlds to
-              life.
-            </p>
-          </div>
-
-          <div className="about-team-grid">
-            {team.map((member, index) => (
-              <TeamMember key={member.id} member={member} number={index + 1} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VALUES */}
-
-      <section className="about-values">
-        <div className="about-values-container">
-          <div className="about-values-header">
-            <span>04 / OUR VALUES</span>
-
-            <h2>
-              WHAT
-              <br />
-              DRIVES US.
-            </h2>
-          </div>
-
+        <section className="about-values" aria-labelledby="about-values-title">
+          <div className="about-section-heading"><span className="about-label">WHAT GUIDES US</span><h2 id="about-values-title">The values behind the work.</h2></div>
           <div className="about-values-list">
-            <article className="about-value">
-              <span className="about-value-number">01</span>
-
-              <h3>CREATIVITY</h3>
-
-              <p>
-                We explore new ideas and create experiences with their own
-                identity.
-              </p>
-
-              <span className="about-value-arrow">↗</span>
-            </article>
-
-            <article className="about-value">
-              <span className="about-value-number">02</span>
-
-              <h3>QUALITY</h3>
-
-              <p>
-                Every detail matters, from gameplay and art to sound and
-                presentation.
-              </p>
-
-              <span className="about-value-arrow">↗</span>
-            </article>
-
-            <article className="about-value">
-              <span className="about-value-number">03</span>
-
-              <h3>COMMUNITY</h3>
-
-              <p>
-                Players are at the center of everything we create and everything
-                we improve.
-              </p>
-
-              <span className="about-value-arrow">↗</span>
-            </article>
+            <article><span>01</span><h3>Creativity</h3><p>We explore ideas and give every experience its own identity.</p></article>
+            <article><span>02</span><h3>Quality</h3><p>We care about the details, from the first prototype to the final build.</p></article>
+            <article><span>03</span><h3>Community</h3><p>Players and partners shape how we create and keep improving.</p></article>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
+        <section className="about-disciplines" aria-labelledby="about-disciplines-title">
+          <div>
+            <span className="about-label">03 / HOW WE WORK</span><h2 id="about-disciplines-title">From the idea<br />to the engine.</h2>
+            <p>We can take on a complete project or contribute specialist support alongside your team.</p>
+            <dl>
+              <div><dt>Programming</dt><dd>Gameplay, feature development and online systems, with experience in Unreal Engine and Unity.</dd></div>
+              <div><dt>Art & animation</dt><dd>Concepts, 3D assets, rigging and animation through to engine implementation.</dd></div>
+              <div><dt>Collaboration</dt><dd>A shared roadmap, visible development progress and direct communication throughout the work.</dd></div>
+            </dl>
+            <Link to="/services" className="about-text-link">EXPLORE OUR SERVICES <span aria-hidden="true">↗</span></Link>
+          </div>
+          <figure className="about-game-art"><img src={omenArtwork} alt="Character artwork from AOne Games' Omen of Sorrow" width="1534" height="993" loading="lazy" /><figcaption>OMEN OF SORROW / AONE GAMES</figcaption></figure>
+        </section>
 
-      <section className="about-games">
-        <div className="about-games-container">
-          <span>DISCOVER OUR WORK</span>
-
-          <h2>
-            EXPLORE
-            <br />
-            OUR GAMES.
-          </h2>
-
-          <Link to="/games" className="about-games-button">
-            VIEW ALL GAMES
-            <span>→</span>
-          </Link>
-        </div>
-      </section>
+        <section className="about-contact" aria-labelledby="about-contact-title">
+          <div><span className="about-label">LET'S CONNECT</span><h2 id="about-contact-title">Tell us what you're working on.</h2><p>Projects, partnerships, press and questions about our games.</p></div>
+          <Link to="/contact" className="about-button">CONTACT AONE GAMES <span aria-hidden="true">↗</span></Link>
+        </section>
+      </div>
     </div>
   );
 }
 
-export default AboutPage;

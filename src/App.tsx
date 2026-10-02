@@ -1,10 +1,12 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import GameDetailPage from "./pages/GameDetailPage";
 import HomePage from "./pages/HomePage";
-import GamesPage from "./pages/GamesPage";
+import ServicesPage from "./pages/ServicesPage";
+import NemoPage from "./pages/NemoPage";
+import ClientsPage from "./pages/ClientsPage";
 import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import AboutPage from "./pages/AboutPage";
@@ -22,7 +24,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
 
-          <Route path="/games" element={<GamesPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/nemo" element={<NemoPage />} />
+          <Route path="/clients" element={<ClientsPage />} />
+          <Route path="/games" element={<Navigate to="/services" replace />} />
 
           <Route path="/games/:slug" element={<GameDetailPage />} />
 

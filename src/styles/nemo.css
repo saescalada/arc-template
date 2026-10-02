@@ -1,0 +1,130 @@
+﻿.nemo-page {
+  padding: 130px 0 72px;
+  background:
+    radial-gradient(ellipse at 90% 15%, #76233422, transparent 50%),
+    var(--canvas);
+}
+.nemo-container {
+  width: min(100% - 96px, 1280px);
+  margin-inline: auto;
+}
+.nemo-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+.nemo-back:hover {
+  color: var(--accent);
+}
+.nemo-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 24px 0 60px;
+}
+.nemo-logo {
+  width: 240px;
+  height: auto;
+  margin-bottom: 28px;
+}
+.nemo-label {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.nemo-hero h1 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.nemo-hero p {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.nemo-button {
+  display: inline-flex;
+  padding: 17px 22px;
+  margin-top: 28px;
+  background: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.nemo-button:hover {
+  background: #ff4858;
+}
+.nemo-art {
+  width: 100%;
+  height: auto;
+}
+.nemo-features {
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.nemo-features h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+  font-weight: 650;
+}
+.nemo-features dl {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+.nemo-features dl > div {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.nemo-features dt {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.nemo-features dd {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.nemo-closing {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 40px;
+}
+.nemo-closing p {
+  color: var(--muted);
+}
+.nemo-closing a:hover,
+.nemo-closing span {
+  color: var(--accent);
+}
+@media (max-width: 760px) {
+  .nemo-container {
+    width: calc(100% - 48px);
+  }
+  .nemo-page {
+    padding-top: 110px;
+  }
+  .nemo-hero,
+  .nemo-features dl {
+    grid-template-columns: 1fr;
+  }
+  .nemo-art {
+    max-width: 440px;
+    margin-inline: auto;
+  }
+  .nemo-closing {
+    flex-direction: column;
+  }
+}
