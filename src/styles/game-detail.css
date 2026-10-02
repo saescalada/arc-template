@@ -1,0 +1,198 @@
+.game-detail {
+  background: var(--canvas);
+}
+
+.game-detail-hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.game-detail-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.2) 65%
+  );
+}
+
+.game-detail-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0 60px 80px;
+
+  color: white;
+}
+
+.game-detail-category {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--accent);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.game-detail-content h1 {
+  max-width: 1000px;
+
+  margin: 0;
+
+  font-size: clamp(60px, 10vw, 150px);
+  line-height: 0.8;
+
+  letter-spacing: -7px;
+  font-weight: 900;
+}
+
+.game-detail-content p {
+  max-width: 500px;
+
+  margin: 35px 0 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* INFORMATION */
+
+.game-information {
+  padding: 120px 0;
+}
+
+.game-information-container {
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0 60px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 120px;
+}
+
+.game-section-label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--accent);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.game-description h2 {
+  margin: 0 0 35px;
+
+  color: var(--text);
+
+  font-size: clamp(50px, 6vw, 90px);
+  line-height: 0.85;
+
+  letter-spacing: -4px;
+}
+
+.game-description p {
+  max-width: 600px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* SPECS */
+
+.game-specifications {
+  border-top: 1px solid var(--line);
+}
+
+.game-spec {
+  padding: 25px 0;
+
+  border-bottom: 1px solid var(--line);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.game-spec span {
+  color: #999;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.game-spec strong {
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+/* NOT FOUND */
+
+.game-not-found {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--surface);
+
+  color: white;
+}
+
+.game-not-found h1 {
+  font-size: clamp(40px, 8vw, 100px);
+}
+
+.game-not-found a {
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .game-detail-content {
+    padding: 0 25px 60px;
+  }
+
+  .game-detail-content h1 {
+    letter-spacing: -3px;
+  }
+
+  .game-information-container {
+    padding: 0 25px;
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+}
