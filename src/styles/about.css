@@ -20,6 +20,12 @@
 .about-philosophy h2 span { color: var(--muted); }
 .about-philosophy > p { max-width: 340px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .about-work { padding-block: 64px; }
+.about-team { padding: 0 0 64px; }
+.about-team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.about-team .team-member-image { aspect-ratio: 4 / 5; }
+.about-team .team-member-info { padding-top: 16px; }
+.about-team .team-member-info h3 { color: var(--text); }
+.about-team .team-member-info > span { color: var(--muted); }
 .about-values { padding: 8px 0 64px; }
 .about-values-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
 .about-values-list article { padding: 22px 24px 22px 0; }
@@ -69,6 +75,8 @@
  .about-values-list article, .about-values-list article + article { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--line); }
  .about-story-copy { order: -1; }
  .about-work { padding-block: 48px; }
+ .about-team { padding-bottom: 48px; }
+ .about-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
  .about-work-row { grid-template-columns: 24px 1fr 20px; padding: 24px 0; }
  .about-work-row p { grid-column: 2; }
  .about-row-arrow { grid-column: 3; grid-row: 1; }

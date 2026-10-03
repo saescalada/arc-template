@@ -32,10 +32,6 @@ function Footer() {
 
         <div className="footer-bottom">
           <small>© {new Date().getFullYear()} AONE GAMES. ALL RIGHTS RESERVED.</small>
-          <ul className="footer-legal" aria-label="Legal information">
-            <li><span>Privacy Policy</span></li>
-            <li><span>Terms of Use</span></li>
-          </ul>
         </div>
       </div>
     </footer>

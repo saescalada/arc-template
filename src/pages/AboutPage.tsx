@@ -1,6 +1,8 @@
 ﻿import { Link } from "react-router-dom";
 import studioImage from "../assets/images/about-studio.jpg";
 import omenArtwork from "../assets/images/hero-2.png";
+import { team } from "../data/team";
+import TeamMember from "../components/TeamMember/TeamMember";
 import "../styles/about.css";
 
 export default function AboutPage() {
@@ -54,6 +56,16 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="about-team" aria-labelledby="about-team-title">
+          <div className="about-section-heading">
+            <span className="about-label">03 / OUR TEAM</span>
+            <h2 id="about-team-title">THE PEOPLE<br />BEHIND THE GAMES.</h2>
+          </div>
+          <div className="about-team-grid">
+            {team.map((member, index) => <TeamMember key={member.id} member={member} number={index + 1} />)}
+          </div>
+        </section>
+
         <section className="about-values" aria-labelledby="about-values-title">
           <div className="about-section-heading"><span className="about-label">WHAT GUIDES US</span><h2 id="about-values-title">The values behind the work.</h2></div>
           <div className="about-values-list">
@@ -65,7 +77,7 @@ export default function AboutPage() {
 
         <section className="about-disciplines" aria-labelledby="about-disciplines-title">
           <div>
-            <span className="about-label">03 / HOW WE WORK</span><h2 id="about-disciplines-title">From the idea<br />to the engine.</h2>
+            <span className="about-label">04 / HOW WE WORK</span><h2 id="about-disciplines-title">From the idea<br />to the engine.</h2>
             <p>We can take on a complete project or contribute specialist support alongside your team.</p>
             <dl>
               <div><dt>Programming</dt><dd>Gameplay, feature development and online systems, with experience in Unreal Engine and Unity.</dd></div>

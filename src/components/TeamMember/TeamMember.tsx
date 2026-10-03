@@ -17,25 +17,25 @@ function TeamMember({ member, number }: Props) {
           {String(number).padStart(2, "0")}
         </span>
 
-        <div className="team-member-socials">
-          {member.linkedin && (
+        {(member.linkedin && member.linkedin !== "#" || member.twitter && member.twitter !== "#" || member.instagram && member.instagram !== "#") && <div className="team-member-socials">
+          {member.linkedin && member.linkedin !== "#" && (
             <a href={member.linkedin} aria-label={`${member.name} LinkedIn`}>
               IN
             </a>
           )}
 
-          {member.twitter && (
+          {member.twitter && member.twitter !== "#" && (
             <a href={member.twitter} aria-label={`${member.name} X`}>
               X
             </a>
           )}
 
-          {member.instagram && (
+          {member.instagram && member.instagram !== "#" && (
             <a href={member.instagram} aria-label={`${member.name} Instagram`}>
               IG
             </a>
           )}
-        </div>
+        </div>}
       </div>
 
       <div className="team-member-info">

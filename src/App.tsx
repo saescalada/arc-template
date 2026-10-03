@@ -1,8 +1,9 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import GameDetailPage from "./pages/GameDetailPage";
+import GamesPage from "./pages/GamesPage";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import NemoPage from "./pages/NemoPage";
@@ -27,7 +28,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/nemo" element={<NemoPage />} />
           <Route path="/clients" element={<ClientsPage />} />
-          <Route path="/games" element={<Navigate to="/services" replace />} />
+          <Route path="/games" element={<GamesPage />} />
 
           <Route path="/games/:slug" element={<GameDetailPage />} />
 
